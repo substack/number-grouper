@@ -1,7 +1,7 @@
 var grouper = require('../');
 var test = require('tap').test;
 
-test('default mark integers', function (t) {
+test('default sep integers', function (t) {
     t.equal(grouper(1), '1');
     t.equal(grouper(12), '12');
     t.equal(grouper(123), '123');
@@ -14,8 +14,8 @@ test('default mark integers', function (t) {
     t.end();
 });
 
-test('custom mark integers', function (t) {
-    var o = { mark : '.' };
+test('custom sep integers', function (t) {
+    var o = { sep : '.' };
     t.equal(grouper(1, o), '1');
     t.equal(grouper(12, o), '12');
     t.equal(grouper(123, o), '123');
@@ -28,7 +28,7 @@ test('custom mark integers', function (t) {
     t.end();
 });
 
-test('default mark radix decimals', function (t) {
+test('default sep radix decimals', function (t) {
     t.equal(grouper(0.1), '0.1');
     t.equal(grouper(0.12), '0.12');
     t.equal(grouper(0.123), '0.123');
@@ -41,7 +41,7 @@ test('default mark radix decimals', function (t) {
     t.end();
 });
 
-test('combined mark and radix decimals', function (t) {
+test('combined sep and radix decimals', function (t) {
     t.equal(grouper(1234.5678), '1,234.5678');
     t.equal(grouper(505.1212), '505.1212');
     t.equal(grouper(789131.1212), '789,131.1212');
