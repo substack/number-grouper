@@ -40,3 +40,10 @@ test('default mark radix decimals', function (t) {
     t.equal(grouper(0.123456789), '0.123456789');
     t.end();
 });
+
+test('combined mark and radix decimals', function (t) {
+    t.equal(grouper(1234.5678), '1,234.5678');
+    t.equal(grouper(505.1212), '505.1212');
+    t.equal(grouper(789131.1212), '789,131.1212');
+    t.end();
+});

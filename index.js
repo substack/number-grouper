@@ -3,8 +3,9 @@ module.exports = function (n, opts) {
     var radix = opts.radix || '.';
     var mark = opts.mark || ',';
     
-    return String(n)
-        .replace(/\./, radix)
+    var parts = String(n).split('.');
+    
+    var integral = parts[0]
         .split('')
         .reverse()
         .join('')
@@ -14,4 +15,6 @@ module.exports = function (n, opts) {
         .join('')
         .replace(new RegExp('^\\' + mark),'')
     ;
+    if (parts[1] === undefined) return integral;
+    return integral + radix + parts[1];
 }
