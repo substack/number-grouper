@@ -47,3 +47,17 @@ test('combined mark and radix decimals', function (t) {
     t.equal(grouper(789131.1212), '789,131.1212');
     t.end();
 });
+
+test('custom radix decimals', function (t) {
+    var o = { radix : '$' };
+    t.equal(grouper(0.1, o), '0$1');
+    t.equal(grouper(0.12, o), '0$12');
+    t.equal(grouper(0.123, o), '0$123');
+    t.equal(grouper(0.1234, o), '0$1234');
+    t.equal(grouper(0.12345, o), '0$12345');
+    t.equal(grouper(0.123456, o), '0$123456');
+    t.equal(grouper(0.1234567, o), '0$1234567');
+    t.equal(grouper(0.12345678, o), '0$12345678');
+    t.equal(grouper(0.123456789, o), '0$123456789');
+    t.end();
+});
