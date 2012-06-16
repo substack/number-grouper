@@ -3,6 +3,8 @@ number-grouper
 
 Render numbers as 3-digit separated groups.
 
+[![build status](https://secure.travis-ci.org/substack/number-grouper.png)](http://travis-ci.org/substack/number-grouper)
+
 example
 =======
 
