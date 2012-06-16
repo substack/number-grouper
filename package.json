@@ -1,0 +1,39 @@
+{
+    "name" : "number-grouper",
+    "version" : "0.0.0",
+    "description" : "render numbers as 3-digit separated groups",
+    "main" : "index.js",
+    "bin" : {},
+    "directories" : {
+        "example" : "example",
+        "test" : "test"
+    },
+    "dependencies" : {},
+    "devDependencies" : {
+        "tap" : "~0.2.5"
+    },
+    "scripts" : {
+        "test" : "tap test/*.js"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/substack/number-grouper.git"
+    },
+    "homepage" : "https://github.com/substack/number-grouper",
+    "keywords" : [
+        "digit",
+        "decimal",
+        "group",
+        "radix",
+        "mark",
+        "number",
+        "comma"
+    ],
+    "author" : {
+        "name" : "James Halliday",
+        "email" : "mail@substack.net",
+        "url" : "http://substack.net"
+    },
+    "license" : "MIT",
+    "engine" : { "node" : ">=0.6" }
+}
