@@ -1,6 +1,6 @@
 {
     "name" : "number-grouper",
-    "version" : "0.0.0",
+    "version" : "0.0.1",
     "description" : "render numbers as 3-digit separated groups",
     "main" : "index.js",
     "bin" : {},
